@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { timeAgo } from '../../utils/timeUtils'; // Importando a função
 import { FaRegHeart } from "react-icons/fa";
 
 const ProfileSidebar = ({ userData }) => {

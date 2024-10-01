@@ -1,5 +1,5 @@
 import React from 'react';
-import { timeAgo } from '../../utils/timeUtils'; // Importando a função
+import { timeAgo } from '../../utils/timeUtils'; 
 
 const RepoItem = ({ repo }) => {
   return (
