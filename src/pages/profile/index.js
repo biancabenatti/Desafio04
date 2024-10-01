@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getUserData, getUserRepos } from '../../routes/api';  
+import { getUserData, getUserRepos } from '../../api/githubService';  
 
 const Profile = () => {
   const { username } = useParams();
