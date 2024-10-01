@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  /* Página de Perfil (Profile) */
+  .profile-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Lado Esquerdo (Dados do Perfil) */
+  .profile-sidebar {
+    width: 25%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-sidebar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .profile-sidebar h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .profile-sidebar p {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .profile-sidebar a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .profile-sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Lado Direito (Repositórios) */
+  .profile-content {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .profile-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .repo-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .repo-list li {
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .repo-list a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .repo-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .repo-stars {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  
+  
