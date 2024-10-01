@@ -1,16 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { FaRegHeart } from "react-icons/fa";
+import { IoPeopleOutline } from 'react-icons/io5';
 
 const ProfileSidebar = ({ userData }) => {
+  const { username } = useParams();
   return (
     <div className="profile-sidebar">
       <img src={userData.avatar_url} alt={userData.name} />
-      <h2>{userData.login}</h2>
+      <h2>{userData.name}</h2>
+      <h3>{`@${username}`}</h3>
       {userData.bio && <p>{userData.bio}</p>}
       <div className="stats">
-        <span>⭐ {userData.public_repos} repositórios</span>
-        <span>👥 {userData.followers} seguidores</span>
+        <span>⭐{userData.public_repos} repositórios</span>
+        <span><IoPeopleOutline />{userData.followers} seguidores</span>
         <span><FaRegHeart /> {userData.following} seguindo</span>
       </div>
       <div className="additional-info">
