@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
+import { FaSearch } from "react-icons/fa";
 
 const Home = () => {
   const [username, setUsername] = useState('');
@@ -24,7 +25,7 @@ const Home = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <button onClick={handleSearch}>Buscar</button>
+        <button onClick={handleSearch}><FaSearch />Buscar</button>
       </div>
     </div>
   );
