@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getUserData, getUserRepos } from '../api/githubService';
-import ProfileSidebar from '../components/Profile/ProfileSidebar';
-import ProfileContent from '../components/Profile/ProfileContent';
+import { getUserData, getUserRepos } from '../../api/githubService';
+import ProfileSidebar from '../../components/Profile/ProfileSidebar';
+import ProfileContent from '../../components/Profile/ProfileContent';
 
 const Profile = () => {
   const { username } = useParams();
