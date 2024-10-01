@@ -11,15 +11,17 @@ const ProfileSidebar = ({ userData, username }) => {
       try {
         const response = await fetch(`https://api.github.com/users/${username}/repos`);
         const repos = await response.json();
-        const stars = repos.reduce((acc, repo) => acc + repo.stargazers_count, 0);
-        setTotalStars(stars);
+        if (Array.isArray(repos)) {
+          const stars = repos.reduce((acc, repo) => acc + (repo.stargazers_count || 0), 0);
+          setTotalStars(stars);
+        } 
       } catch (error) {
         console.error("Erro ao buscar os repositórios:", error);
       }
     };
 
     fetchTotalStars();
-  }, [username]);
+  }, [username]); // Re-executa se o username mudar
 
   return (
     <div className="profile-sidebar">

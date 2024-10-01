@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getUserData, getUserRepos } from '../../api/githubService';
 import ProfileSidebar from '../../components/Profile/ProfileSidebar';
 import ProfileContent from '../../components/Profile/ProfileContent';
+import './styles.css';
 
 const Profile = () => {
   const { username } = useParams();

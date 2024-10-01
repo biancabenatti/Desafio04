@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import RepoItem from './RepoItem';
+import HamburgerMenu from '../../components/Menu/HamburgerMenu';
 
 const ProfileContent = ({ repos }) => {
-  const sortedRepos = repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+  const [sortedRepos, setSortedRepos] = useState(repos);
+  const [filter, setFilter] = useState('stars-desc');
+
+  useEffect(() => {
+    const sortRepos = (repos) => {
+      switch (filter) {
+        case 'stars-asc':
+          return [...repos].sort((a, b) => a.stargazers_count - b.stargazers_count);
+        case 'stars-desc':
+          return [...repos].sort((a, b) => b.stargazers_count - a.stargazers_count);
+        case 'alphabetical':
+          return [...repos].sort((a, b) => a.name.localeCompare(b.name));
+        default:
+          return repos;
+      }
+    };
+
+    setSortedRepos(sortRepos(repos));
+  }, [repos, filter]);
 
   return (
     <div className="profile-content">
       <h2>Repositórios Públicos</h2>
+      <HamburgerMenu setFilter={setFilter} /> {/* Adiciona o menu hambúrguer */}
       <ul className="repo-list">
         {sortedRepos.map((repo) => (
           <RepoItem key={repo.id} repo={repo} />
@@ -17,4 +37,3 @@ const ProfileContent = ({ repos }) => {
 };
 
 export default ProfileContent;
-
