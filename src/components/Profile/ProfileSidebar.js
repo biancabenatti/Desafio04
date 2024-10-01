@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { timeAgo } from '../../utils/timeUtils'; // Importando a função
+import { FaRegHeart } from "react-icons/fa";
 
 const ProfileSidebar = ({ userData }) => {
   return (
@@ -11,7 +12,7 @@ const ProfileSidebar = ({ userData }) => {
       <div className="stats">
         <span>⭐ {userData.public_repos} repositórios</span>
         <span>👥 {userData.followers} seguidores</span>
-        <span>🔗 {userData.following} seguindo</span>
+        <span><FaRegHeart /> {userData.following} seguindo</span>
       </div>
       <div className="additional-info">
         <p><strong>Organização:</strong> {userData.company || 'N/A'}</p>
