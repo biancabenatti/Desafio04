@@ -26,7 +26,7 @@ const ProfileContent = ({ repos }) => {
   return (
     <div className="profile-content">
       <h2>Repositórios Públicos</h2>
-      <HamburgerMenu setFilter={setFilter} /> {/* Adiciona o menu hambúrguer */}
+      <HamburgerMenu setFilter={setFilter} /> 
       <ul className="repo-list">
         {sortedRepos.map((repo) => (
           <RepoItem key={repo.id} repo={repo} />
