@@ -24,7 +24,7 @@ const ProfileContent = ({ repos }) => {
   }, [repos, filter]);
 
   return (
-    <div className="profile-content">
+    <div className="flex-1 bg-[#ecf0f1] p-5 overflow-y-auto text-[#242424]">
       <h2>Repositórios Públicos</h2>
       <HamburgerMenu setFilter={setFilter} /> 
       <ul className="repo-list">

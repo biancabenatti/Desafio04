@@ -24,9 +24,9 @@ const ProfileSidebar = ({ userData, username }) => {
   }, [username]); // Re-executa se o username mudar
 
   return (
-    <div className="profile-sidebar">
-      <img src={userData.avatar_url} alt={userData.name} />
-      <h2>{userData.name}</h2>
+    <div className="w-1/3 bg-gray-800 text-white p-5 flex flex-col items-center">
+      <img className="w-36 h-36 mb-5" src={userData.avatar_url} alt={userData.name} />
+      <h2 className="mb-2.5 text-[22px]">{userData.name}</h2>
       <h3>{`@${username}`}</h3>
       {userData.bio && <p>{userData.bio}</p>}
       <div className="stats">

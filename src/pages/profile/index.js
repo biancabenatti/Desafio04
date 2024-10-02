@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { getUserData, getUserRepos } from '../../api/githubService';
 import ProfileSidebar from '../../components/Profile/ProfileSidebar';
 import ProfileContent from '../../components/Profile/ProfileContent';
-import './styles.css';
 
 const Profile = () => {
   const { username } = useParams();
@@ -30,7 +29,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile-container">
+    <div className="flex h-screen">
       <ProfileSidebar userData={userData} />
       <ProfileContent repos={repos} />
     </div>
