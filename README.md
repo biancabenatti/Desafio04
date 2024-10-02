@@ -54,9 +54,6 @@ Para instalar as dependências do projeto, rode o seguinte comando:
 **Instalar React e ReactDOM**
 npm install react react-dom
 
-**Instalar React Router DOM**
-npm install react-router-dom
-
 **Instalar TailwindCSS**
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
@@ -64,11 +61,13 @@ npx tailwindcss init -p
 **Instalar SweetAlert2**
 npm install sweetalert2
 
-**Instalar React Icons**
-npm install react-icons
-
 
 # Uso
+
+Para iniciar o servidor, utilize:
+
+npm start
+
 # Testes
 # Deploy
 
