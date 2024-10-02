@@ -4,6 +4,10 @@ module.exports = {
     "./public/index.html",
   ],
   theme: {
+    fontFamily: {
+      condensed: ['"Roboto Condensed"', 'sans-serif'],
+    },
+
     extend: {},
   },
   plugins: [],
