@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 const Home = () => {
   const [username, setUsername] = useState('');
@@ -10,7 +11,12 @@ const Home = () => {
     if (username.trim()) {
       navigate(`/profile/${username}`);
     } else {
-      alert("O campo de busca está vazio, inclua um nome de usuário e clique em buscar!");
+      Swal.fire({
+        title: 'Atenção!',
+        text: 'O campo de busca está vazio, inclua um nome de usuário e clique em buscar!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
     }
   };
 
