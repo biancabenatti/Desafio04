@@ -33,7 +33,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-[url('/src/assets/home.jpg')] bg-cover bg-center">
       <ProfileSidebar userData={userData} />
       <ProfileContent repos={repos} />
     </div>

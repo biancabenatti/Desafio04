@@ -8,15 +8,15 @@ const HamburgerMenu = ({ setFilter }) => {
   };
 
   return (
-    <div className="flex justify-end mb-4 relative">
+    <div className="flex justify-end mb-6 relative">
       <button 
-        className="px-8 py-5 bg-gray-800 text-white rounded-md cursor-pointer font-roboto-condensed text-base hover:bg-blue-700" 
+        className="px-8 py-5 bg-gray-800 text-white rounded-md cursor-pointer hover:bg-blue-700" 
         onClick={toggleMenu}
       >
         Ordenar
       </button>
       {isOpen && (
-        <div className="absolute bg-white border border-gray-300 shadow-md z-50 p-2 mt-2">
+        <div className="absolute bg-white border border-gray-300 shadow-md z-50 p-2 mt-16">
           <button 
             className="block w-full text-left px-3 py-2 hover:bg-gray-100" 
             onClick={() => { setFilter('stars-asc'); toggleMenu(); }}

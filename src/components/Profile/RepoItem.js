@@ -5,12 +5,12 @@ import { TbPoint } from "react-icons/tb";
 
 const RepoItem = ({ repo }) => {
   return (
-    <li className="bg-white mb-4 p-4 rounded-lg shadow flex flex-col justify-start">
-      <a className="text-[#242424] no-underline font-bold text-[1.4rem] hover:underline " href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
-      <div className="repo-details">
+    <li className="mb-4 p-4 rounded-lg shadow flex flex-col justify-start backdrop-blur-3xl border-t-gray-700 border-t-2">
+      <a className="text-[#ffffff] no-underline font-bold text-[1.4rem] hover:underline " href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
         <p>{repo.description || 'Sem descrição'}</p>
-        <span className="repo-stars"><FaRegStar/>{repo.stargazers_count}<TbPoint /></span>
-        <span className="repo-updated">Update {timeAgo(repo.updated_at)}</span>
+      <div className="flex gap-4 mt-8">
+        <span className="flex gap-2 items-center"><FaRegStar/>{repo.stargazers_count}<TbPoint /></span>
+        <span className="flex gap-2 items-center">Update {timeAgo(repo.updated_at)}</span>
       </div>
     </li>
   );
