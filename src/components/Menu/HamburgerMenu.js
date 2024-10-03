@@ -9,28 +9,29 @@ const HamburgerMenu = ({ setFilter }) => {
 
   return (
     <div className="flex justify-end mb-4 relative">
+      <h2 class="flex text-3xl font-bold mr-auto items-center">Repositórios Públicos</h2>
       <button 
-        className="px-8 py-5 bg-gray-800 text-white rounded-md cursor-pointer font-roboto-condensed text-base hover:bg-blue-700" 
+        className="px-8 py-5 bg-gray-800 text-white rounded-md cursor-pointer font-roboto-condensed text-base " 
         onClick={toggleMenu}
       >
         Ordenar
       </button>
       {isOpen && (
-        <div className="absolute bg-white border border-gray-300 shadow-md z-50 p-2 mt-2">
+        <div className="absolute bg-white border border-gray-300 shadow-md z-50 p-2 mt-16 text-black">
           <button 
-            className="block w-full text-left px-3 py-2 hover:bg-gray-100" 
+            className="block w-full text-left px-3 py-2 hover:bg-gray-300" 
             onClick={() => { setFilter('stars-asc'); toggleMenu(); }}
           >
             Estrelas Crescentes
           </button>
           <button 
-            className="block w-full text-left px-3 py-2 hover:bg-gray-100" 
+            className="block w-full text-left px-3 py-2 hover:bg-gray-300" 
             onClick={() => { setFilter('stars-desc'); toggleMenu(); }}
           >
             Estrelas Decrescentes
           </button>
           <button 
-            className="block w-full text-left px-3 py-2 hover:bg-gray-100" 
+            className="block w-full text-left px-3 py-2 hover:bg-gray-300" 
             onClick={() => { setFilter('alphabetical'); toggleMenu(); }}
           >
             Ordem Alfabética

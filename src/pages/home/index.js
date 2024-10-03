@@ -47,7 +47,7 @@ const Home = () => {
 export default Home;
 
 /* Mudanças para tornar o código responsivo:
-No caso do md: significa que a regra será aplicada em telas de tamanho médio ou maior (768px ou mais).
+No caso do md: ele significa que a regra será aplicada em telas de tamanho médio ou maior (768px ou mais).
 
 Na linha que contém o input e o botão de busca, adicionei flex-col md:flex-row para que em telas menores (mobile), os elementos sejam exibidos um abaixo do outro, e em telas maiores (md para cima), eles fiquem lado a lado.
 

@@ -24,24 +24,24 @@ const ProfileSidebar = ({ userData, username }) => {
   }, [username]);
 
   return (
-    <div className="w-1/3 text-white p-5 flex flex-col items-center backdrop-blur-3xl rounded-r-xl  border-r-gray-700 border-r-2 ">
-      <img className="w-64 h-64 mb-12 mt-10 rounded-lg" src={userData.avatar_url} alt={userData.name} />
-      <h2 className="mb-2.5 text-3xl">{userData.name}</h2>
-      <h3>{`@${username}`}</h3>
-      {userData.bio && <p>{userData.bio}</p>}
-      <div class="flex-grow">
-        <div className="flex gap-4 mt-8">
+    <div className="shadow-2xl  w-full md:w-1/3 text-white p-5 flex flex-col items-center backdrop-blur-2xl rounded-r-xl border-r-gray-700 border-r-2 text-xl">
+      <img className="w-32 h-32 md:w-64 md:h-64 mb-12 mt-10 rounded-lg border-2" src={userData.avatar_url} alt={userData.name} />
+      <h2 className="mb-2.5 text-3xl md:text-4xl font-bold">{userData.name}</h2>
+      <h3 className="font-light">{`@${username}`}</h3>
+      {userData.bio && <p className="font-light text-center md:text-left">{userData.bio}</p>}
+      <div className="flex-grow font-light">
+        <div className="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
           <span className="flex gap-2 items-center"><IoPeopleOutline /> {userData.followers} followers</span>
           <span className="flex gap-2 items-center"><FaRegHeart /> {userData.following} following</span>
-          <span className="flex gap-2 items-center"><FaRegStar />{totalStars} stars</span>
+          <span className="flex gap-2 items-center"><FaRegStar /> {totalStars} stars</span>
         </div>
-        <div className="mt-5">
+        <div className="mt-5 font-light text-center md:text-left">
           <p><strong>Organização:</strong> {userData.company || 'N/A'}</p>
           <p><strong>Localização:</strong> {userData.location || 'N/A'}</p>
           <p><strong>Email:</strong> {userData.email || 'N/A'}</p>
           {userData.blog && (
             <p>
-              <strong>Website:</strong>
+              <strong>Website: </strong>
               <a href={userData.blog} target="_blank" rel="noopener noreferrer">{userData.blog}</a>
             </p>
           )}
@@ -52,10 +52,10 @@ const ProfileSidebar = ({ userData, username }) => {
             </p>
           )}
         </div>
-          <Link to="/" className="flex justify-center items-center p-1 h-12 w-full md:w-36 bg-gray-950 text-white rounded-lg cursor-pointer text-lg hover:bg-gray-900">Voltar</Link>
       </div>
+          <Link to="/" className="flex justify-center items-center p-1 h-12 w-full md:w-36 bg-gray-950 text-white rounded-lg cursor-pointer text-lg hover:bg-gray-900">Voltar</Link>
     </div>
-  );
+  )
 };
 
 export default ProfileSidebar;

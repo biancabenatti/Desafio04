@@ -1,15 +1,14 @@
 import React from 'react';
 import { timeAgo } from '../../utils/timeUtils'; 
 import { FaRegStar } from "react-icons/fa";
-import { TbPoint } from "react-icons/tb";
 
 const RepoItem = ({ repo }) => {
   return (
-    <li className="mb-4 p-4 rounded-lg shadow flex flex-col justify-start backdrop-blur-3xl border-t-gray-700 border-t-2">
+    <li className="mb-4 p-4 rounded-lg flex flex-col justify-start backdrop-blur-3xl border-t-gray-700 border-t-2 shadow-2xl">
       <a className="text-[#ffffff] no-underline font-bold text-[1.4rem] hover:underline " href={repo.html_url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
         <p>{repo.description || 'Sem descrição'}</p>
-      <div className="flex gap-4 mt-8">
-        <span className="flex gap-2 items-center"><FaRegStar/>{repo.stargazers_count}<TbPoint /></span>
+      <div className="flex gap-1 mt-5">
+        <span className="flex gap-2 items-center"><FaRegStar/>{repo.stargazers_count} -</span>
         <span className="flex gap-2 items-center">Update {timeAgo(repo.updated_at)}</span>
       </div>
     </li>
