@@ -5,11 +5,11 @@ import { IoPeopleOutline } from 'react-icons/io5';
 
 const ProfileSidebar = ({ userData, username }) => {
   const [totalStars, setTotalStars] = useState(0);
-
+  
   useEffect(() => {
     const fetchTotalStars = async () => {
       try {
-        const response = await fetch(`https://api.github.com/users/'${username} '/repos`);
+        const response = await fetch(`https://api.github.com/users/${username}/repos`);
         const repos = await response.json();
         if (Array.isArray(repos)) {
           let stars = 0;
