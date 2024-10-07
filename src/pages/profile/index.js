@@ -33,10 +33,14 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex h-screen bg-[url('/src/assets/home.jpg')] bg-cover bg-center">
+    <div className="flex flex-col md:flex-row h-screen bg-[#353739] font-condensed">
+    <div className="md:w-1/3 w-full md:max-h-full">
       <ProfileSidebar userData={userData} username={username} />
+    </div>
+    <div className="flex-1 p-4 overflow-y-auto">
       <ProfileContent repos={repos} />
     </div>
+  </div>
   );
 };
 

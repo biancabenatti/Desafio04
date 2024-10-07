@@ -8,10 +8,10 @@ const HamburgerMenu = ({ setFilter }) => {
   };
 
   return (
-    <div className="flex justify-end mb-4 relative">
+    <div className="flex justify-end mb-4 relative font-condensed">
       <h2 className="flex text-3xl font-bold mr-auto items-center">Repositórios Públicos</h2>
       <button 
-        className="px-8 py-5 bg-gray-950 text-slate-100 hover:bg-gray-800 rounded-md cursor-pointer font-roboto-condensed text-base " 
+        className="px-7 py-4 bg-gray-950 text-slate-100 hover:bg-gray-800 rounded-md cursor-pointer font-roboto-condensed text-base " 
         onClick={toggleMenu}
       >
         Ordenar

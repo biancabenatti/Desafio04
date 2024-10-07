@@ -5,7 +5,7 @@ import { IoPeopleOutline } from 'react-icons/io5';
 
 const ProfileSidebar = ({ userData, username }) => {
   const [totalStars, setTotalStars] = useState(0);
-  
+
   useEffect(() => {
     const fetchTotalStars = async () => {
       try {
@@ -24,11 +24,11 @@ const ProfileSidebar = ({ userData, username }) => {
     };
     fetchTotalStars();
   }, [username]);
-  
+
   return (
-    <div className="shadow-2xl w-full md:w-1/4 text-slate-100 p-2 flex flex-col items-center backdrop-blur-2xl rounded-r-xl border-r-gray-700 text-lg">
-      <img className="w-32 h-32 md:w-64 md:h-64 mb-12 mt-10 rounded-lg" src={userData.avatar_url} alt={userData.name} />
-      <h2 className="mb-2.5 text-2xl md:text-3xl font-bold">{userData.name}</h2>
+    <div className="bg-[#262829] h-full w-full md:w-full text-slate-100 p-4 flex flex-col items-center border-r-gray-700 text-lg">
+      <img className="w-32 h-32 md:w-40 md:h-40 mb-4 mt-10 rounded-lg" src={userData.avatar_url} alt={userData.name} />
+      <h2 className="mb-8 text-xl md:text-4xl mt-6 font-bold">{userData.name}</h2>
       <h3 className="font-light">{`@${username}`}</h3>
       {userData.bio && <p className="font-light text-center md:text-left">{userData.bio}</p>}
       <div className="flex-grow font-light">
@@ -55,7 +55,7 @@ const ProfileSidebar = ({ userData, username }) => {
           )}
         </div>
       </div>
-          <Link to="/" className="flex justify-center items-center p-1 h-12 w-full md:w-36 bg-gray-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-gray-900">Voltar</Link>
+      <Link to="/" className="flex justify-center items-center p-2 h-12 w-full mt-4 md:w-36 bg-gray-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-gray-900">Voltar</Link>
     </div>
   )
 };

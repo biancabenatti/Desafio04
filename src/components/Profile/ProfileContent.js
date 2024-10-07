@@ -24,9 +24,9 @@ const ProfileContent = ({ repos }) => {
   }, [repos, filter]);
 
   return (
-    <div className="flex-1 p-5 overflow-y-auto text-white ">
-      <HamburgerMenu setFilter={setFilter} /> 
-      <ul className="text-1xl font-light">
+    <div className="flex-1 p-4 overflow-y-auto text-white">
+      <HamburgerMenu setFilter={setFilter} />
+      <ul className="text-base md:text-lg font-light">
         {sortedRepos.map((repo) => (
           <RepoItem key={repo.id} repo={repo} />
         ))}
