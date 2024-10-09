@@ -12,8 +12,6 @@ Este projeto é uma aplicação web desenvolvida em ReactJS que permite aos usu�
 2. [Funcionalidades](#Funcionalidades)
 3. [Instalação](#Instalação)
 4. [Uso](#Uso)
-5. [Testes](#Testes)
-6. [Deploy](#Deploy)
 
 ---
 
@@ -31,19 +29,22 @@ Este projeto é uma aplicação web desenvolvida em ReactJS que permite aos usu�
    - Botão "Pesquisar" que redireciona para a página de perfil do usuário pesquisado.
 
 2. **Página de Perfil**
-   - Exibir as seguintes informações do usuário: 
+   - Exibi as seguintes informações do usuário: 
      - Nome
      - Foto de perfil
      - Bio
+     - Organização
+     - Localização
+     - Email
      - Link para o site pessoal (se disponível)
      - Link para o perfil do Twitter (se disponível)
-   - Listar os repositórios do usuário, ordenados por número de estrelas (do maior para o menor).
-   - Cada repositório deve ser um link clicável que abre o repositório no GitHub em uma nova aba.
+   - Lista os repositórios do usuário, com opçaõ de ordena-los por número de estrelas ou ordem alfabética.
+   - Cada repositório é um link clicável que abre o repositório no GitHub em uma nova aba.
    - Botão "Voltar" para retornar à página inicial.
 
 3. **Integração com a API do GitHub**
-   - Utilizar a API pública do GitHub para buscar dados dos usuários e repositórios.
-   - Endpoints a serem utilizados:
+   - Utiliza a API pública do GitHub para buscar dados dos usuários e repositórios.
+   - Endpoints utilizados:
      - Dados do usuário
      - Repositórios do usuário
      
@@ -55,8 +56,7 @@ Para instalar as dependências do projeto, rode o seguinte comando:
 npm install react react-dom
 
 **Instalar TailwindCSS**
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+npm install -D tailwindcss
 
 # Uso
 
@@ -64,9 +64,6 @@ Para iniciar o servidor, utilize:
 
 npm start
 
-# Testes
-
-# Deploy
 
 
 
