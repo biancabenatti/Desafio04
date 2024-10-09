@@ -33,8 +33,8 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-[#353739] font-condensed">
-    <div className="md:w-1/3 w-full md:max-h-full">
+    <div className="flex flex-col md:flex-row bg-[#353739] font-condensed md:h-screen">
+    <div className="md:w-1/3 md:max-h-full">
       <ProfileSidebar userData={userData} username={username} />
     </div>
     <div className="flex-1 p-4 overflow-y-auto">

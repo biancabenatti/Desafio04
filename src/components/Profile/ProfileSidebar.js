@@ -44,11 +44,13 @@ const ProfileSidebar = ({ userData, username }) => {
         <div className="mt-5 font-light md:text-left">
           <p class="flex gap-2"><strong class="flex gap-2 items-center"><GoOrganization />Organização:</strong> {userData.company || 'N/A'}</p>
           <p class="flex gap-2"><strong class="flex gap-2 items-center">< IoLocationOutline />Localização:</strong> {userData.location || 'N/A'}</p>
-          <p class="flex gap-2"><strong class="flex gap-2 items-center"><MdOutlineAlternateEmail />Email:</strong> {userData.email || 'N/A'}</p>
+          <p class="flex gap-2"><strong class="flex gap-2 items-center"><MdOutlineAlternateEmail />Email:</strong><a href={`mailto:${userData.email}`} class="text-slate-100 hover:underline">{userData.email || 'N/A'}
+          </a>
+          </p>
           {userData.blog && (
             <p class="flex gap-2">
               <strong class="flex gap-2 items-center"><CgWebsite />Website: </strong>
-              <a href={userData.blog} target="_blank" rel="noopener noreferrer">{userData.blog}</a>
+              <a class="text-slate-100 hover:underline" href={userData.blog} target="_blank" rel="noopener noreferrer ">{userData.blog}</a>
             </p>
           )}
           {userData.twitter_username && (
@@ -58,8 +60,10 @@ const ProfileSidebar = ({ userData, username }) => {
             </p>
           )}
         </div>
+        <div className="flex justify-center">
+          <Link to="/" className="flex justify-center items-center p-2 h-12 w-36 mt-4 md:w-36 bg-gray-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-gray-900">Voltar</Link>
+        </div>
       </div>
-      <Link to="/" className="flex justify-center items-center p-2 h-12 w-full mt-4 md:w-36 bg-gray-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-gray-900">Voltar</Link>
     </div>
   )
 };

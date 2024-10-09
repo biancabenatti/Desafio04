@@ -58,10 +58,6 @@ npm install react react-dom
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
-**Instalar SweetAlert2**
-npm install sweetalert2
-
-
 # Uso
 
 Para iniciar o servidor, utilize:
@@ -69,6 +65,7 @@ Para iniciar o servidor, utilize:
 npm start
 
 # Testes
+
 # Deploy
 
 
