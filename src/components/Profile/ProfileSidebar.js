@@ -42,20 +42,20 @@ const ProfileSidebar = ({ userData, username }) => {
           <span className="flex gap-2 items-center"><FaRegStar /> {totalStars} stars</span>
         </div>
         <div className="mt-5 font-light md:text-left">
-          <p class="flex gap-2"><strong class="flex gap-2 items-center"><GoOrganization />Organização:</strong> {userData.company || 'N/A'}</p>
-          <p class="flex gap-2"><strong class="flex gap-2 items-center">< IoLocationOutline />Localização:</strong> {userData.location || 'N/A'}</p>
-          <p class="flex gap-2"><strong class="flex gap-2 items-center"><MdOutlineAlternateEmail />Email:</strong><a href={`mailto:${userData.email}`} class="text-slate-100 hover:underline">{userData.email || 'N/A'}
+          <p className="flex gap-2"><strong className="flex gap-2 items-center"><GoOrganization />Organização:</strong> {userData.company || 'N/A'}</p>
+          <p className="flex gap-2"><strong className="flex gap-2 items-center">< IoLocationOutline />Localização:</strong> {userData.location || 'N/A'}</p>
+          <p className="flex gap-2"><strong className="flex gap-2 items-center"><MdOutlineAlternateEmail />Email:</strong><a href={`mailto:${userData.email}`} class="text-slate-100 hover:underline">{userData.email || 'N/A'}
           </a>
           </p>
           {userData.blog && (
-            <p class="flex gap-2">
-              <strong class="flex gap-2 items-center"><CgWebsite />Website: </strong>
-              <a class="text-slate-100 hover:underline" href={userData.blog} target="_blank" rel="noopener noreferrer ">{userData.blog}</a>
+            <p className="flex gap-2">
+              <strong className="flex gap-2 items-center"><CgWebsite />Website: </strong>
+              <a className="text-slate-100 hover:underline" href={userData.blog} target="_blank" rel="noopener noreferrer ">{userData.blog}</a>
             </p>
           )}
           {userData.twitter_username && (
-            <p class="flex gap-2">
-              <strong class="flex gap-2 items-center"><BsTwitterX />Twitter:</strong>
+            <p className="flex gap-2">
+              <strong className="flex gap-2 items-center"><BsTwitterX />Twitter:</strong>
               <a href={userData.twitter_username} target="_blank" rel="noopener noreferrer">@{userData.twitter_username}</a>
             </p>
           )}

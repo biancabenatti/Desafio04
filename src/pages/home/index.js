@@ -45,13 +45,3 @@ const Home = () => {
 };
 
 export default Home;
-
-/* Mudanças para tornar o código responsivo:
-No caso do md: ele significa que a regra será aplicada em telas de tamanho médio ou maior (768px ou mais).
-
-Na linha que contém o input e o botão de busca, adicionei flex-col md:flex-row para que em telas menores (mobile), os elementos sejam exibidos um abaixo do outro, e em telas maiores (md para cima), eles fiquem lado a lado.
-
-Ajustes de padding e margem:
-
-O padding da div que envolve o conteúdo foi ajustado para p-6 md:p-14, onde em telas menores (mobile) ele usa um padding menor e em telas maiores ele expande.
-Para o espaçamento entre o input e o botão, adicionei mb-4 md:mb-0 no input, para que em telas menores ele tenha uma margem inferior e em telas maiores a margem seja 0.*/
