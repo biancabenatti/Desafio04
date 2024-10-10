@@ -2,24 +2,26 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
 import Swal from 'sweetalert2';
+import {checkRepositoryExists} from '../../services/apiService.js'
 
 const Home = () => {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     if (username.trim()) {
-      navigate(`/profile/${username}`);
+      const repoExists = await checkRepositoryExists(username); 
+  
+      if (repoExists) {
+        navigate(`/profile/${username}`);
+      } else {
+        Swal.fire("Repositório não encontrado!");
+      }
     } else {
-      Swal.fire({
-        title: 'Atenção!',
-        text: 'O campo de busca está vazio, inclua um nome de usuário e clique em buscar!',
-        icon: 'error',
-        confirmButtonText: 'Ok'
-      });
+      Swal.fire("O campo de busca está vazio!");
     }
   };
-
+  
   return (
     <div className="flex justify-center items-center bg-[url('/src/assets/home.jpg')] bg-cover bg-center h-screen font-condensed text-2xl">
       <div className="text-center p-6 md:p-14 bg-white bg-opacity-20 rounded-lg shadow-lg backdrop-blur-sm max-w-xs md:max-w-md lg:max-w-lg">
