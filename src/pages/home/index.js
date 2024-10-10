@@ -22,6 +22,11 @@ const Home = () => {
     }
   };
   
+  const handleKeyUp = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
   return (
     <div className="flex justify-center items-center bg-[url('/src/assets/home.jpg')] bg-cover bg-center h-screen font-condensed text-2xl">
       <div className="text-center p-6 md:p-14 bg-white bg-opacity-20 rounded-lg shadow-lg backdrop-blur-sm max-w-xs md:max-w-md lg:max-w-lg">
@@ -32,6 +37,7 @@ const Home = () => {
             placeholder="Type the username here..."
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            onKeyUp={handleKeyUp}
             className="w-full md:w-80 p-2 border border-gray-300 rounded-lg mb-4 md:mb-0 md:mr-2 placeholder: flex text-lg"
           />
           <button
