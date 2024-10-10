@@ -50,13 +50,12 @@ Este projeto é uma aplicação web desenvolvida em ReactJS que permite aos usu�
      
 # Instalação
 
-Para instalar as dependências do projeto, rode o seguinte comando:
+Para instalar o projeto, você precisará ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
-**Instalar React e ReactDOM**
-npm install react react-dom
+Depois de clonar o repositório, instale as dependências do projeto rodando os seguintes comandos:
 
-**Instalar TailwindCSS**
-npm install -D tailwindcss
+**Instalar Node Package Manager**
+npm install
 
 # Uso
 
