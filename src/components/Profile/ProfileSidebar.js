@@ -44,7 +44,7 @@ const ProfileSidebar = ({ userData, username }) => {
         <div className="mt-5 font-light md:text-left">
           <p className="flex gap-2"><strong className="flex gap-2 items-center"><GoOrganization />Organização:</strong> {userData.company || 'N/A'}</p>
           <p className="flex gap-2"><strong className="flex gap-2 items-center">< IoLocationOutline />Localização:</strong> {userData.location || 'N/A'}</p>
-          <p className="flex gap-2"><strong className="flex gap-2 items-center"><MdOutlineAlternateEmail />Email:</strong><a href={`mailto:${userData.email}`} class="text-slate-100 hover:underline">{userData.email || 'N/A'}
+          <p className="flex gap-2"><strong className="flex gap-2 items-center"><MdOutlineAlternateEmail />Email:</strong><a href={`mailto:${userData.email}`} className="text-slate-100 hover:underline">{userData.email || 'N/A'}
           </a>
           </p>
           {userData.blog && (
