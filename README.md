@@ -52,7 +52,7 @@ Este projeto é uma aplicação web desenvolvida em ReactJS que permite aos usu�
 
 Para instalar o projeto, você precisará ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
-Depois de clonar o repositório, instale as dependências do projeto rodando os seguintes comandos:
+Depois de clonar o repositório, instale as dependências do projeto rodando o seguinte comando:
 
 **Instalar Node Package Manager**
 npm install
