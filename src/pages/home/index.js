@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaSearch } from "react-icons/fa";
 import Swal from 'sweetalert2';
-import {checkRepositoryExists} from '../../services/apiService.js'
+import { checkRepositoryExists } from '../../services/apiService.js'
 
 const Home = () => {
   const [username, setUsername] = useState('');
@@ -10,8 +10,8 @@ const Home = () => {
 
   const handleSearch = async () => {
     if (username.trim()) {
-      const repoExists = await checkRepositoryExists(username); 
-  
+      const repoExists = await checkRepositoryExists(username);
+
       if (repoExists) {
         navigate(`/profile/${username}`);
       } else {
@@ -21,7 +21,7 @@ const Home = () => {
       Swal.fire("O campo de busca está vazio!");
     }
   };
-  
+
   const handleKeyUp = (e) => {
     if (e.key === 'Enter') {
       handleSearch();
@@ -33,11 +33,14 @@ const Home = () => {
         <h1 className="mb-6 md:mb-7 text-2xl md:text-4xl text-white font-condensed">Search Devs</h1>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <input
+            id="username"
+            name="username"
             type="text"
             placeholder="Type the username here..."
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             onKeyUp={handleKeyUp}
+            autoComplete="username"
             className="w-full md:w-80 p-2 border border-gray-300 rounded-lg mb-4 md:mb-0 md:mr-2 placeholder: flex text-lg"
           />
           <button
