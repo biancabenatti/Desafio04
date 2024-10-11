@@ -31,8 +31,8 @@ const ProfileSidebar = ({ userData, username }) => {
 
   return (
     <div className="bg-[#262829] h-full w-full md:w-full text-slate-100 p-4 flex flex-col items-center border-r-gray-700 text-lg">
-      <img className="w-32 h-32 md:w-48 md:h-48 mb-4 mt-10 rounded-lg" src={userData.avatar_url} alt={userData.name} />
-      <h2 className="mb-8 text-xl md:text-4xl mt-6 font-bold">{userData.name}</h2>
+      <img className="w-32 h-32 md:w-52 md:h-52 mb-4 mt-10 rounded-full" src={userData.avatar_url} alt={userData.name} />
+      <h2 className="mb-4 text-xl md:text-4xl mt-6 font-bold">{userData.name}</h2>
       <h3 className="font-light">{`@${username}`}</h3>
       {userData.bio && <p className="font-light text-center md:text-left">{userData.bio}</p>}
       <div className="flex-grow font-light">
@@ -61,7 +61,7 @@ const ProfileSidebar = ({ userData, username }) => {
           )}
         </div>
         <div className="flex justify-center">
-          <Link to="/" className="flex justify-center items-center p-2 h-12 w-36 mt-4 md:w-36 bg-gray-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-gray-900">Voltar</Link>
+          <Link to="/" className="flex justify-center items-center p-2 h-12 w-36 mt-7 md:w-36 bg-zinc-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-black">Voltar</Link>
         </div>
       </div>
     </div>

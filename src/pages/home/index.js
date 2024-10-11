@@ -45,7 +45,7 @@ const Home = () => {
           />
           <button
             onClick={handleSearch}
-            className="flex justify-center items-center p-1 h-12 w-full md:w-36 bg-gray-800 text-white rounded-lg cursor-pointer text-lg hover:bg-gray-900"
+            className="flex justify-center items-center p-1 h-12 w-full md:w-36 bg-zinc-900 text-white rounded-lg cursor-pointer text-lg hover:bg-zinc-950"
           >
             <FaSearch className="mr-2" /> Buscar
           </button>
