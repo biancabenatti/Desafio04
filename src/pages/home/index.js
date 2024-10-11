@@ -29,8 +29,8 @@ const Home = () => {
   };
   return (
     <div className="flex justify-center items-center bg-[url('/src/assets/home.jpg')] bg-cover bg-center h-screen font-condensed text-2xl">
-      <div className="text-center p-6 md:p-14 bg-white bg-opacity-20 rounded-lg shadow-lg backdrop-blur-sm max-w-xs md:max-w-md lg:max-w-lg">
-        <h1 className="mb-6 md:mb-7 text-2xl md:text-4xl text-white font-condensed">Search Devs</h1>
+      <div className="text-center p-6 md:p-14 bg-gray-300 bg-opacity-10 rounded-lg shadow-xl shadow-neutral-900 backdrop-blur-sm max-w-xs md:max-w-md lg:max-w-lg">
+        <h1 className="mb-6 md:mb-5 text-2xl md:text-4xl text-white font-bold">Search Devs</h1>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <input
             id="username"
