@@ -31,17 +31,17 @@ const ProfileSidebar = ({ userData, username }) => {
 
   return (
     <div className="bg-[#262829] h-full w-full md:w-full text-slate-100 p-4 flex flex-col items-center border-r-gray-700 text-lg">
-      <img className="w-32 h-32 md:w-52 md:h-52 mb-4 mt-10 rounded-full" src={userData.avatar_url} alt={userData.name} />
-      <h2 className="mb-4 text-xl md:text-4xl mt-6 font-bold">{userData.name}</h2>
+      <img className="w-32 h-32 md:w-48 md:h-48 mb-4 mt-3 rounded-full" src={userData.avatar_url} alt={userData.name} />
+      <h2 className="mb-2 text-xl md:text-3xl mt-3 font-bold">{userData.name}</h2>
       <h3 className="font-light">{`@${username}`}</h3>
       {userData.bio && <p className="font-light text-center md:text-left">{userData.bio}</p>}
       <div className="flex-grow font-light">
-        <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+        <div className="flex flex-wrap gap-4 mt-2 justify-center md:justify-start">
           <span className="flex gap-2 items-center"><IoPeopleOutline /> {userData.followers} followers</span>
           <span className="flex gap-2 items-center"><FaRegHeart /> {userData.following} following</span>
           <span className="flex gap-2 items-center"><FaRegStar /> {totalStars} stars</span>
         </div>
-        <div className="mt-5 font-light md:text-left">
+        <div className="mt-3 font-light md:text-left">
           <p className="flex gap-2"><strong className="flex gap-2 items-center"><GoOrganization />Organização:</strong> {userData.company || 'N/A'}</p>
           <p className="flex gap-2"><strong className="flex gap-2 items-center">< IoLocationOutline />Localização:</strong> {userData.location || 'N/A'}</p>
           <p className="flex gap-2"><strong className="flex gap-2 items-center"><MdOutlineAlternateEmail />Email:</strong><a href={`mailto:${userData.email}`} className="text-slate-100 hover:underline">{userData.email || 'N/A'}
@@ -61,7 +61,7 @@ const ProfileSidebar = ({ userData, username }) => {
           )}
         </div>
         <div className="flex justify-center">
-          <Link to="/" className="flex justify-center items-center p-2 h-12 w-36 mt-7 md:w-36 bg-zinc-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-black">Voltar</Link>
+          <Link to="/" className="flex justify-center items-center p-2 h-12  mt-2 bg-zinc-950 text-slate-100 rounded-lg cursor-pointer text-lg hover:bg-black w-full">Voltar</Link>
         </div>
       </div>
     </div>

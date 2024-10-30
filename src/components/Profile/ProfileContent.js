@@ -7,6 +7,7 @@ const ProfileContent = ({ repos }) => {
   const [filter, setFilter] = useState('stars-desc');
 
   useEffect(() => {
+    // sort: converte os elementos do array em strings e os compara
     const sortRepos = (repos) => {
       switch (filter) {
         case 'stars-asc':

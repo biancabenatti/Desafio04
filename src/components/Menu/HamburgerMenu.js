@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const HamburgerMenu = ({ setFilter }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = () => { // Inverte o estado de isOpen cada vez que é chamada. Se o menu está fechado, ele o abre, e vice-versa.
     setIsOpen(!isOpen);
   };
 
